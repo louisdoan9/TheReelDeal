@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { HeroComponent } from './hero/hero.component';
 import { LatestReviewsComponent } from './latest-reviews/latest-reviews.component';
+import { CallToActionComponent } from './call-to-action/call-to-action.component';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ import { LatestReviewsComponent } from './latest-reviews/latest-reviews.componen
     HeaderComponent,
     HeroComponent,
     LatestReviewsComponent,
+    CallToActionComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

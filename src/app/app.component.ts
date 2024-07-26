@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { HeroComponent } from './hero/hero.component';
 import { LatestReviewsComponent } from './latest-reviews/latest-reviews.component';
 import { CallToActionComponent } from './call-to-action/call-to-action.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ import { CallToActionComponent } from './call-to-action/call-to-action.component
     HeroComponent,
     LatestReviewsComponent,
     CallToActionComponent,
+    FooterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

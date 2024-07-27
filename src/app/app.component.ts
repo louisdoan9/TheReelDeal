@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
+import { AboutComponent } from './about/about.component';
 import { HeroComponent } from './hero/hero.component';
 import { LatestReviewsComponent } from './latest-reviews/latest-reviews.component';
 import { CallToActionComponent } from './call-to-action/call-to-action.component';
@@ -13,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
     RouterOutlet,
     HeaderComponent,
     HeroComponent,
+    AboutComponent,
     LatestReviewsComponent,
     CallToActionComponent,
     FooterComponent,

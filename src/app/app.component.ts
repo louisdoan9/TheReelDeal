@@ -24,4 +24,12 @@ import { FooterComponent } from './footer/footer.component';
 })
 export class AppComponent {
   title = 'TheReelDeal';
+
+  ngOnInit() {
+    fetch('https://the-reel-deal-backend.vercel.app/article')
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      });
+  }
 }

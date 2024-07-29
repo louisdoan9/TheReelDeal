@@ -1,0 +1,6 @@
+<ul>
+  @for (review of reviews; track review[0]) {
+  <a [routerLink]="[review[0]]">{{ review[2] }}</a>
+  }
+  <a routerLink="">Back to homepage</a>
+</ul>

@@ -8,4 +8,14 @@ import { RouterModule } from '@angular/router';
   templateUrl: './latest-reviews.component.html',
   styleUrl: './latest-reviews.component.scss',
 })
-export class LatestReviewsComponent {}
+export class LatestReviewsComponent {
+  reviews = [];
+
+  ngOnInit() {
+    fetch('https://the-reel-deal-backend.vercel.app/article/latest')
+      .then((response) => response.json())
+      .then((data) => {
+        this.reviews = data;
+      });
+  }
+}

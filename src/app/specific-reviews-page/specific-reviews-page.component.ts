@@ -12,8 +12,27 @@ import { RouterModule } from '@angular/router';
 export class SpecificReviewsPageComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
   reviewID = '';
+  reviewInfo: {
+    ID: string;
+    Title: string;
+    Date: string;
+    Author: string;
+    'Mentioned Films': { ID: string; Title: string }[];
+  } = { ID: '', Title: '', Date: '', Author: '', 'Mentioned Films': [] };
 
   constructor() {
     this.reviewID = this.route.snapshot.params['id'];
+  }
+
+  ngOnInit() {
+    fetch(
+      'https://the-reel-deal-backend.vercel.app/reviews-detailed/' +
+        this.reviewID
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        this.reviewInfo = data;
+        console.log(data);
+      });
   }
 }

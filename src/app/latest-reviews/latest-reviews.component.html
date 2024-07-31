@@ -2,8 +2,8 @@
   <h2>Latest Reviews</h2>
   <p>From the Screen to the Scene — Check Out What's Just Been Seen!</p>
   <ul>
-    @for (review of reviews; track reviews[0]) {
-    <li>{{ review[2] }}</li>
+    @for (review of reviews; track review.ID) {
+    <li>{{ review.Title }}</li>
     }
   </ul>
   <a routerLink="all-reviews">See all reviews</a>

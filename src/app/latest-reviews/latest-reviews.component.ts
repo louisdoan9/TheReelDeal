@@ -9,12 +9,19 @@ import { RouterModule } from '@angular/router';
   styleUrl: './latest-reviews.component.scss',
 })
 export class LatestReviewsComponent {
-  reviews = [];
+  reviews: {
+    ID: string;
+    Title: string;
+    Date: string;
+    Author: string;
+    'Mentioned Films': { ID: string; Title: string }[];
+  }[] = [];
 
   ngOnInit() {
-    fetch('https://the-reel-deal-backend.vercel.app/article/latest')
+    fetch('https://the-reel-deal-backend.vercel.app/reviews-partial/latest')
       .then((response) => response.json())
       .then((data) => {
+        console.log(data);
         this.reviews = data;
       });
   }

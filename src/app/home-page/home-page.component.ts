@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HeroComponent } from '../hero/hero.component';
 import { AboutComponent } from '../about/about.component';
+import { StepsComponent } from '../steps/steps.component';
 import { LatestReviewsComponent } from '../latest-reviews/latest-reviews.component';
 import { CallToActionComponent } from '../call-to-action/call-to-action.component';
 
@@ -10,6 +11,7 @@ import { CallToActionComponent } from '../call-to-action/call-to-action.componen
   imports: [
     HeroComponent,
     AboutComponent,
+    StepsComponent,
     LatestReviewsComponent,
     CallToActionComponent,
   ],

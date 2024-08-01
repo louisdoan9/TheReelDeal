@@ -1,0 +1,20 @@
+section {
+  display: flex;
+  padding: 50px;
+  gap: 30px;
+  background-color: #02121a;
+
+  div {
+    color: white;
+    width: 33%;
+    h2 {
+      font-size: 50px;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+    h3 {
+      font-size: 25px;
+      margin: 0;
+    }
+  }
+}

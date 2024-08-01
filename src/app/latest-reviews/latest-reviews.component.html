@@ -1,10 +1,21 @@
 <section>
   <h2>Latest Reviews</h2>
-  <p>From the Screen to the Scene — Check Out What's Just Been Seen!</p>
+  <p class="sub-title">
+    From the Screen to the Scene — Check Out What's Just Been Seen!
+  </p>
   <ul>
     @for (review of reviews; track review.ID) {
-    <li>{{ review.Title }}</li>
+    <a [routerLink]="['all-reviews', review.ID]" class="review">
+      <h3 class="author">
+        By <em>{{ review.Author }}</em>
+      </h3>
+      <h3 class="review-title">"{{ review.Title }}"</h3>
+      <p>Featuring</p>
+      @for (film of review['Mentioned Films']; track film.ID) {
+      <li class="film-title">{{ film.Title }}</li>
+      }
+    </a>
     }
   </ul>
-  <a routerLink="all-reviews">See all reviews</a>
+  <a routerLink="all-reviews" class="all-reviews-link">See all reviews</a>
 </section>

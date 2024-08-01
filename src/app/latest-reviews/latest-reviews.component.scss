@@ -1,19 +1,77 @@
 section {
   display: flex;
   flex-direction: column;
+  padding: 75px 50px;
+
+  h2 {
+    font-size: 50px;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  .sub-title {
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
   ul {
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
-    padding: 10px;
+    gap: 25px;
+    padding: 0px;
 
-    li {
-      border: 1px solid black;
-      width: 300px;
-      height: 300px;
+    .review {
+      display: flex;
+      flex-direction: column;
+      border-radius: 20px 0px;
+      padding: 25px;
+      box-sizing: border-box;
+      background-color: #02121a;
+      color: white;
+      transition: all 0.25s;
+      height: 375px;
+      text-decoration: none;
+
+      &:hover {
+        box-shadow: 5px 5px 0px #830b0f;
+        transition: all 0.25s;
+        cursor: pointer;
+      }
+
+      .review-title {
+        font-size: 30px;
+        margin: 0;
+        font-weight: 400;
+        height: 50%;
+      }
+      .author {
+        font-size: 15px;
+        font-weight: 600;
+      }
+      p {
+        font-size: 16px;
+        margin: 0;
+        margin-bottom: 10px;
+        text-decoration: underline;
+      }
+      .film-title {
+        font-size: 14px;
+      }
+
+      width: calc(25% - 25px);
+      min-height: 300px;
     }
   }
-  a {
+  .all-reviews-link {
+    margin-top: 10px;
     margin-left: auto;
+    font-size: 20px;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

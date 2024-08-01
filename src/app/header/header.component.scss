@@ -2,13 +2,16 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 25px 40px;
-  background-color: #f4d06f;
+  padding: 25px 50px;
+  background-color: black;
+  color: white;
 
   img {
     width: 30px;
     height: 30px;
     margin-right: 10px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(110deg)
+      brightness(102%) contrast(103%);
   }
 
   h1 {
@@ -21,8 +24,8 @@ nav {
     margin-right: 30px;
     border: none;
     background: none;
-    color: black;
-    font-size: 18px;
+    color: white;
+    font-size: 16px;
     font-weight: 600;
 
     &:hover {
@@ -34,10 +37,10 @@ nav {
     background-color: #3943b7;
     border: none;
     color: white;
-    padding: 10px;
+    padding: 10px 15px;
     border-radius: 20px;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 15px;
 
     &:hover {
       background-color: #444fc5;

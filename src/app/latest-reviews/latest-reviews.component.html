@@ -9,11 +9,14 @@
       <h3 class="author">
         By <em>{{ review.Author }}</em>
       </h3>
-      <h3 class="review-title">"{{ review.Title }}"</h3>
+      <div class="review-title-container">
+        <h3 class="review-title">"{{ review.Title }}"</h3>
+      </div>
       <p>Featuring</p>
       @for (film of review['Mentioned Films']; track film.ID) {
       <li class="film-title">{{ film.Title }}</li>
       }
+      <p class="date">{{ review.Date }}</p>
     </a>
     }
   </ul>

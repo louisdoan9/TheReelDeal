@@ -3,6 +3,7 @@ import { HeroComponent } from '../hero/hero.component';
 import { AboutComponent } from '../about/about.component';
 import { StepsComponent } from '../steps/steps.component';
 import { LatestReviewsComponent } from '../latest-reviews/latest-reviews.component';
+import { TopMoviesComponent } from '../top-movies/top-movies.component';
 import { CallToActionComponent } from '../call-to-action/call-to-action.component';
 
 @Component({
@@ -13,6 +14,7 @@ import { CallToActionComponent } from '../call-to-action/call-to-action.componen
     AboutComponent,
     StepsComponent,
     LatestReviewsComponent,
+    TopMoviesComponent,
     CallToActionComponent,
   ],
   templateUrl: './home-page.component.html',

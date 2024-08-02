@@ -2,69 +2,59 @@ section {
   display: flex;
   flex-direction: column;
   padding: 75px 50px;
-  padding-top: 50px;
 
-  a {
-    color: inherit;
-    text-decoration: none;
-    font-size: 20px;
-    margin-bottom: 50px;
-    width: fit-content;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-  h1 {
+  h2 {
     font-size: 50px;
     margin: 0;
+    margin-bottom: 20px;
   }
-  h2 {
-    font-size: 25px;
+  .sub-title {
+    font-size: 20px;
     margin: 0;
-    margin-top: 20px;
-    font-weight: 400;
+    margin-bottom: 20px;
   }
 
-  .mentioned-films {
+  ul {
     display: flex;
-    gap: 50px;
     flex-wrap: wrap;
-    margin-top: 60px;
+    list-style-type: none;
+    gap: 25px;
+    padding: 0px;
 
-    .mentioned-film {
+    .film {
       display: flex;
       flex-direction: column;
       border-radius: 20px 0px;
-      padding: 30px;
+      padding: 25px;
       box-sizing: border-box;
-      border: 2px solid black;
-      max-width: 500px;
-      height: fit-content;
-      transition: box-shadow 0.25s;
+      background-color: #02121a;
+      color: white;
+      transition: all 0.25s;
+      text-decoration: none;
+      min-width: 300px;
 
       &:hover {
-        cursor: pointer;
         box-shadow: 5px 5px 0px #830b0f;
-        transition: box-shadow 0.25s;
+        transition: all 0.25s;
+        cursor: pointer;
       }
 
-      .title-score-container {
+      .film-title {
+        font-size: 30px;
+      }
+
+      .film-score {
         display: flex;
+        justify-content: center;
         align-items: center;
-        gap: 20px;
 
-        .film-title {
-          font-size: 30px;
-        }
-
-        .film-score {
+        .score {
           display: flex;
           justify-content: center;
           align-items: center;
           min-width: 40px;
           min-height: 40px;
-          border: 2px solid black;
+          max-width: 40px;
           border-radius: 40px;
           margin-left: auto;
         }
@@ -78,6 +68,17 @@ section {
           background-color: #ee4266;
         }
       }
+    }
+  }
+  .all-films-link {
+    margin-top: 10px;
+    margin-left: auto;
+    font-size: 20px;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

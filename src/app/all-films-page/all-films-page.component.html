@@ -1,0 +1,20 @@
+<section>
+  <a routerLink="">Back to homepage</a>
+  <h1>Films</h1>
+  <h2>See what people think about your favorite films!</h2>
+  <ul>
+    @for (film of films; track films[0]) {
+    <a [routerLink]="['all-films', films[0]]" class="film">
+      <h3 class="film-title">{{ film[1] }}</h3>
+      <p class="film-score">
+        Normalized Score: @if (Math.round(film[2] * 10) / 10 >= 0.80) {
+        <span class="score high">{{ Math.round(film[2] * 10) / 10 }}</span>
+        } @else if (Math.round(film[2] * 10) / 10 >= 0.40) {
+        <span class="score medium">{{ Math.round(film[2] * 10) / 10 }}</span>
+        } @else {
+        <span class="score low">{{ Math.round(film[2] * 10) / 10 }}</span>
+        }
+      </p> </a
+    >}
+  </ul>
+</section>

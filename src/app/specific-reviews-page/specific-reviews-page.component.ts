@@ -15,10 +15,23 @@ export class SpecificReviewsPageComponent {
   reviewInfo: {
     ID: string;
     Title: string;
+    Body: string;
     Date: string;
     Author: string;
-    'Mentioned Films': { ID: string; Title: string }[];
-  } = { ID: '', Title: '', Date: '', Author: '', 'Mentioned Films': [] };
+    'Mentioned Films': {
+      ID: number;
+      Title: string;
+      Score: number;
+      Categories: string[];
+    }[];
+  } = {
+    ID: '',
+    Title: '',
+    Body: '',
+    Date: '',
+    Author: '',
+    'Mentioned Films': [],
+  };
 
   constructor() {
     this.reviewID = this.route.snapshot.params['id'];

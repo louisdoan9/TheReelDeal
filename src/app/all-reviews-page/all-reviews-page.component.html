@@ -4,7 +4,7 @@
   <h2>See what people are saying about the latest films!</h2>
   <ul>
     @for (review of reviews; track review.ID) {
-    <a [routerLink]="['all-reviews', review.ID]" class="review">
+    <a [routerLink]="[review.ID]" class="review">
       <h3 class="author">
         By <em>{{ review.Author }}</em>
       </h3>

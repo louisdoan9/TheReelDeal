@@ -23,8 +23,8 @@ export class SpecificFilmsPageComponent {
   } = {
     ID: '',
     Title: '',
-    'Normalized Score': '',
-    'Score Trend': '',
+    'Normalized Score': '0',
+    'Score Trend': '0',
     'Film Categories': [],
   };
 

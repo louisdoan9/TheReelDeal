@@ -18,15 +18,21 @@ nav {
     margin: 0;
     margin-right: auto;
     font-size: 30px;
+    a {
+      color: white;
+      text-decoration: none;
+    }
   }
 
-  .reviews {
+  .reviews,
+  .films {
     margin-right: 30px;
     border: none;
     background: none;
     color: white;
     font-size: 16px;
     font-weight: 600;
+    text-decoration: none;
 
     &:hover {
       text-decoration: underline;

@@ -1,6 +1,8 @@
 <section>
   <h2>Top Movies</h2>
-  <p class="sub-title">See the top movies according to our community!</p>
+  <p class="sub-title">
+    Find the top-rated movies according to our critics' scores!
+  </p>
   <ul>
     @for (film of films; track film[0]) {
     <a [routerLink]="['all-films', film[0]]" class="film">

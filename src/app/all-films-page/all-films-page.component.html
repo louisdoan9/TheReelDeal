@@ -1,7 +1,7 @@
 <section>
   <a routerLink="">Back to homepage</a>
   <h1>Films</h1>
-  <h2>See what people think about your favorite films!</h2>
+  <h2>See how your favorite films stack up against each other!</h2>
   <ul>
     @for (film of films; track film[0]) {
     <a [routerLink]="[film[0]]" class="film">

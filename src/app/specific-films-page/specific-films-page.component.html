@@ -1,1 +1,37 @@
-<p>specific-films-page works!</p>
+<section>
+  <a routerLink="/all-films">Back to all films</a>
+  <h1>{{ filmInfo.Title }}</h1>
+
+  <ul class="film-categories">
+    @for (category of filmInfo['Film Categories']; track category) {
+    <h3 class="film-title">{{ category }}</h3>
+    }
+  </ul>
+
+  <p class="film-score">
+    Normalized Score: @if (Math.round(Number(filmInfo["Normalized Score"]) * 10)
+    / 10 >= 0.80) {
+    <span class="score high">{{
+      Math.round(Number(filmInfo["Normalized Score"]) * 10) / 10
+    }}</span>
+    } @else if (Math.round(Number(filmInfo["Normalized Score"]) * 10) / 10 >=
+    0.40) {
+    <span class="score medium">{{
+      Math.round(Number(filmInfo["Normalized Score"]) * 10) / 10
+    }}</span>
+    } @else {
+    <span class="score low">{{
+      Math.round(Number(filmInfo["Normalized Score"]) * 10) / 10
+    }}</span>
+    }
+  </p>
+  <p class="film-score">
+    Score Trend: @if (filmInfo["Score Trend"] == "0") {
+    <span class="score high">{{ filmInfo["Score Trend"] }}</span>
+    } @else if (filmInfo["Score Trend"] == "-1") {
+    <span class="score medium">{{ filmInfo["Score Trend"] }}</span>
+    } @else {
+    <span class="score low">{{ filmInfo["Score Trend"] }}</span>
+    }
+  </p>
+</section>

@@ -31,6 +31,7 @@ section {
 
   ul {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     list-style-type: none;
     gap: 25px;
@@ -46,12 +47,17 @@ section {
       color: white;
       transition: all 0.25s;
       text-decoration: none;
-      min-width: 300px;
+      max-width: 350px;
+      width: 100%;
 
       &:hover {
         box-shadow: 5px 5px 0px #830b0f;
         transition: all 0.25s;
         cursor: pointer;
+      }
+
+      @media (max-width: 825px) {
+        margin-bottom: 20px;
       }
 
       .film-title {

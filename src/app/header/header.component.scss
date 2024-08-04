@@ -15,6 +15,7 @@ nav {
   .logo-name-container {
     display: flex;
     margin-right: auto;
+    align-items: center;
 
     @media (max-width: 650px) {
       margin: 0;

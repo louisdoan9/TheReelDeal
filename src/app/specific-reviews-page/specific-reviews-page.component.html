@@ -1,9 +1,8 @@
 <section>
   <a class="back-link" routerLink="/all-reviews">Back to all reviews</a>
   <h1>{{ reviewInfo.Title }}</h1>
-  <h2>By {{ reviewInfo.Author }}</h2>
-  <p>{{ reviewInfo.Date }}</p>
-  <p>"{{ reviewInfo.Body }}"</p>
+  <h2>By {{ reviewInfo.Author }} | {{ reviewInfo.Date }}</h2>
+  <p class="review-body">"{{ reviewInfo.Body }}"</p>
 
   <ul class="mentioned-films">
     @for (film of reviewInfo['Mentioned Films']; track film.ID) {

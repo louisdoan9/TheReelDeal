@@ -18,6 +18,8 @@ section {
   h1 {
     font-size: 50px;
     margin: 0;
+    overflow: hidden;
+    word-wrap: break-word;
   }
   .film-categories {
     display: flex;

@@ -23,6 +23,13 @@ section {
     display: flex;
     gap: 20px;
     padding: 0;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+
+    .film-category {
+      margin: 0;
+    }
   }
   .film-score {
     display: flex;

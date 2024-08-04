@@ -4,7 +4,7 @@ section {
   padding: 75px 50px;
   padding-top: 50px;
 
-  a {
+  .back-link {
     color: inherit;
     text-decoration: none;
     font-size: 20px;
@@ -15,9 +15,12 @@ section {
       text-decoration: underline;
     }
   }
+
   h1 {
     font-size: 50px;
     margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   h2 {
     font-size: 25px;
@@ -31,10 +34,18 @@ section {
     gap: 50px;
     flex-wrap: wrap;
     margin-top: 60px;
+    padding: 0;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
     .mentioned-film {
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
       border-radius: 20px 0px;
       padding: 30px;
       box-sizing: border-box;
@@ -42,6 +53,7 @@ section {
       max-width: 500px;
       height: fit-content;
       transition: box-shadow 0.25s;
+      flex-wrap: wrap;
 
       &:hover {
         cursor: pointer;
@@ -49,34 +61,30 @@ section {
         transition: box-shadow 0.25s;
       }
 
-      .title-score-container {
+      .film-title {
+        font-size: 30px;
+        margin: 0;
+        text-align: center;
+      }
+
+      .film-score {
         display: flex;
+        justify-content: center;
         align-items: center;
-        gap: 20px;
-
-        .film-title {
-          font-size: 30px;
-        }
-
-        .film-score {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          min-width: 40px;
-          min-height: 40px;
-          border: 2px solid black;
-          border-radius: 40px;
-          margin-left: auto;
-        }
-        .high {
-          background-color: #03cea4;
-        }
-        .medium {
-          background-color: #eeb868;
-        }
-        .low {
-          background-color: #ee4266;
-        }
+        min-width: 40px;
+        min-height: 40px;
+        border: 2px solid black;
+        border-radius: 40px;
+        margin: 0;
+      }
+      .high {
+        background-color: #03cea4;
+      }
+      .medium {
+        background-color: #eeb868;
+      }
+      .low {
+        background-color: #ee4266;
       }
     }
   }

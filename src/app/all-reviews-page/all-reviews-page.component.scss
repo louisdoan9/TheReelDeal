@@ -46,10 +46,9 @@ section {
       background-color: #02121a;
       color: white;
       transition: all 0.25s;
-      height: 400px;
+      min-height: 420px;
       text-decoration: none;
       width: calc(25% - 25px);
-      min-height: 300px;
 
       &:hover {
         box-shadow: 5px 5px 0px #830b0f;
@@ -98,6 +97,7 @@ section {
       }
       .date {
         margin-top: auto;
+        padding-top: 10px;
         text-decoration: none;
       }
     }

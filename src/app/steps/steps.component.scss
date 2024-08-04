@@ -4,6 +4,14 @@ section {
   gap: 30px;
   background-color: #02121a;
 
+  @media (max-width: 650px) {
+    align-items: center;
+    flex-direction: column;
+    div {
+      width: 100% !important;
+    }
+  }
+
   div {
     color: white;
     width: 33%;

@@ -7,18 +7,20 @@
 
   <ul class="mentioned-films">
     @for (film of reviewInfo['Mentioned Films']; track film.ID) {
-    <div class="mentioned-film">
-      <div class="title-score-container">
-        <h3 class="film-title">{{ film.Title }}</h3>
-        @if (film.Score >= 80) {
-        <h3 class="film-score high">{{ film.Score }}</h3>
-        } @else if (film.Score >= 40) {
-        <h3 class="film-score medium">{{ film.Score }}</h3>
-        } @else {
-        <h3 class="film-score low">{{ film.Score }}</h3>
-        }
+    <a [routerLink]="['/all-films', film.ID]">
+      <div class="mentioned-film">
+        <div class="title-score-container">
+          <h3 class="film-title">{{ film.Title }}</h3>
+          @if (film.Score >= 80) {
+          <h3 class="film-score high">{{ film.Score }}</h3>
+          } @else if (film.Score >= 40) {
+          <h3 class="film-score medium">{{ film.Score }}</h3>
+          } @else {
+          <h3 class="film-score low">{{ film.Score }}</h3>
+          }
+        </div>
       </div>
-    </div>
+    </a>
     }
   </ul>
 </section>

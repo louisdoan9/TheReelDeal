@@ -31,7 +31,8 @@ section {
       color: white;
       transition: all 0.25s;
       text-decoration: none;
-      min-width: 300px;
+      max-width: 300px;
+      width: 100%;
 
       &:hover {
         box-shadow: 5px 5px 0px #830b0f;
@@ -47,6 +48,7 @@ section {
         display: flex;
         justify-content: center;
         align-items: center;
+        gap: 20px;
 
         .score {
           display: flex;

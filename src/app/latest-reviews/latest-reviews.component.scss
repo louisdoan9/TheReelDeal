@@ -32,6 +32,19 @@ section {
       transition: all 0.25s;
       height: 400px;
       text-decoration: none;
+      width: calc(25% - 25px);
+      min-height: 300px;
+
+      @media (max-width: 1000px) {
+        width: calc(33% - 25px);
+      }
+      @media (max-width: 800px) {
+        width: calc(50% - 25px);
+      }
+      @media (max-width: 550px) {
+        width: calc(100%);
+        max-width: 300px;
+      }
 
       &:hover {
         box-shadow: 5px 5px 0px #830b0f;
@@ -70,9 +83,6 @@ section {
         margin-top: auto;
         text-decoration: none;
       }
-
-      width: calc(25% - 25px);
-      min-height: 300px;
     }
   }
   .all-reviews-link {

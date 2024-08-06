@@ -1,3 +1,4 @@
+@if (localStorage['userInfo']) {
 <section>
   <a routerLink="">Back to homepage</a>
   <h1>Films</h1>
@@ -18,3 +19,6 @@
     >}
   </ul>
 </section>
+} @else {
+<app-access-denied></app-access-denied>
+}

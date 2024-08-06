@@ -1,15 +1,17 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RouterModule } from '@angular/router';
+import { AccessDeniedComponent } from '../access-denied/access-denied.component';
 
 @Component({
   selector: 'app-specific-reviews-page',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, AccessDeniedComponent],
   templateUrl: './specific-reviews-page.component.html',
   styleUrl: './specific-reviews-page.component.scss',
 })
 export class SpecificReviewsPageComponent {
+  localStorage = localStorage;
   route: ActivatedRoute = inject(ActivatedRoute);
   reviewID = '';
   reviewInfo: {
@@ -45,7 +47,6 @@ export class SpecificReviewsPageComponent {
       .then((response) => response.json())
       .then((data) => {
         this.reviewInfo = data;
-        console.log(data);
       });
   }
 }

@@ -1,3 +1,4 @@
+@if (localStorage['userInfo']) {
 <section>
   <a class="back-link" routerLink="/all-reviews">Back to all reviews</a>
   <h1>{{ reviewInfo.Title }}</h1>
@@ -21,3 +22,6 @@
     }
   </ul>
 </section>
+} @else {
+<app-access-denied></app-access-denied>
+}

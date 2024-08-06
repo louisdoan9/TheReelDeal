@@ -1,17 +1,19 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RouterModule } from '@angular/router';
+import { AccessDeniedComponent } from '../access-denied/access-denied.component';
 
 @Component({
   selector: 'app-specific-films-page',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, AccessDeniedComponent],
   templateUrl: './specific-films-page.component.html',
   styleUrl: './specific-films-page.component.scss',
 })
 export class SpecificFilmsPageComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
   Math = Math;
+  localStorage = localStorage;
   Number = Number;
   filmID = '';
   filmInfo: {

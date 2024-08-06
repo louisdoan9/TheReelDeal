@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { AccessDeniedComponent } from '../access-denied/access-denied.component';
 
 @Component({
   selector: 'app-all-films-page',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, AccessDeniedComponent],
   templateUrl: './all-films-page.component.html',
   styleUrl: './all-films-page.component.scss',
 })
 export class AllFilmsPageComponent {
   Math = Math;
+  localStorage = localStorage;
   films = [];
 
   ngOnInit() {

@@ -15,7 +15,9 @@
       <label for="signup-real-name">Real Name (optional)</label>
       <input id="signup-real-name" name="signup-real-name" type="text" />
     </div>
-
+    @if (duplicateUserError) {
+    <p>Username already has an account</p>
+    }
     <button type="submit">Submit</button>
   </form>
   <button (click)="changeDisplay()" class="change-display-button">
@@ -35,7 +37,9 @@
       <label for="signin-password">Password</label>
       <input id="signin-password" name="signin-password" type="text" required />
     </div>
-
+    @if (noUserError) {
+    <p>Incorrect password</p>
+    }
     <button type="submit">Submit</button>
   </form>
   <button (click)="changeDisplay()" class="change-display-button">

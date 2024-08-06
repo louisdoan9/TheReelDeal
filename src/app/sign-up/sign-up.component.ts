@@ -9,6 +9,8 @@ import { Component } from '@angular/core';
 })
 export class SignUpComponent {
   display = 'sign-up';
+  noUserError = false;
+  duplicateUserError = false;
 
   changeDisplay() {
     if (this.display === 'sign-in') {
@@ -43,7 +45,13 @@ export class SignUpComponent {
       }),
     }).then((res) =>
       res.json().then((data) => {
-        console.log(data);
+        this.duplicateUserError = false;
+        if (data.message == 'failed') {
+          this.duplicateUserError = true;
+        } else {
+          localStorage.setItem('userInfo', data.userInfo[0]);
+          window.location.href = '/all-reviews';
+        }
       })
     );
   }
@@ -69,7 +77,13 @@ export class SignUpComponent {
       }),
     }).then((res) =>
       res.json().then((data) => {
-        localStorage.setItem('userInfo', data.userInfo[0]);
+        this.noUserError = false;
+        if (data.message == 'User not found') {
+          this.noUserError = true;
+        } else {
+          localStorage.setItem('userInfo', data.userInfo[0]);
+          window.location.href = '/all-reviews';
+        }
       })
     );
   }

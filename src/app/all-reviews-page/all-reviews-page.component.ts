@@ -18,11 +18,12 @@ export class AllReviewsPageComponent {
   }[] = [];
 
   ngOnInit() {
-    fetch('https://the-reel-deal-backend.vercel.app/reviews-partial')
-      .then((response) => response.json())
-      .then((data) => {
-        this.reviews = data;
-        console.log(data);
-      });
+    if (localStorage['userInfo']) {
+      fetch('https://the-reel-deal-backend.vercel.app/reviews-partial')
+        .then((response) => response.json())
+        .then((data) => {
+          this.reviews = data;
+        });
+    }
   }
 }

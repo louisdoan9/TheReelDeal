@@ -1,0 +1,55 @@
+section {
+  display: flex;
+  flex-direction: column;
+  padding: 75px 50px;
+
+  h1 {
+    font-size: 50px;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .form-item {
+      display: flex;
+      flex-direction: column;
+    }
+    button {
+      margin-top: 20px;
+      background-color: #830b0f;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 15px;
+      width: 100px;
+
+      &:hover {
+        background-color: #970c11;
+      }
+    }
+  }
+
+  .change-display-button {
+    margin-top: 30px;
+    margin-left: auto;
+    font-size: 20px;
+    background: none;
+    border: none;
+    text-align: right;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

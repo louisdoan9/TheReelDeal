@@ -1,18 +1,45 @@
-<form (submit)="createUser($event)">
-  <label for="signup-username">Username</label>
-  <input id="signup-username" name="signup-username" type="text" required />
-  <label for="signup-password">Password</label>
-  <input id="signup-password" name="signup-password" type="text" required />
-  <label for="signup-real-name">Real Name</label>
-  <input id="signup-real-name" name="signup-real-name" type="text" />
+<section>
+  @if (display === "sign-up") {
+  <h1>Create an Account!</h1>
+  <h2>Unlock a world of cinema insights with a simple sign-up.</h2>
+  <form (submit)="createUser($event)">
+    <div class="form-item">
+      <label for="signup-username">Username</label>
+      <input id="signup-username" name="signup-username" type="text" required />
+    </div>
+    <div class="form-item">
+      <label for="signup-password">Password</label>
+      <input id="signup-password" name="signup-password" type="text" required />
+    </div>
+    <div class="form-item">
+      <label for="signup-real-name">Real Name (optional)</label>
+      <input id="signup-real-name" name="signup-real-name" type="text" />
+    </div>
 
-  <button type="submit">Submit</button>
-</form>
-<form (submit)="getUser($event)">
-  <label for="signin-username">Username</label>
-  <input id="signin-username" name="signin-username" type="text" required />
-  <label for="signin-password">Password</label>
-  <input id="signin-password" name="signin-password" type="text" required />
+    <button type="submit">Submit</button>
+  </form>
+  <button (click)="changeDisplay()" class="change-display-button">
+    Already have an account? Click here to sign in.
+  </button>
+  } @if (display === "sign-in") {
+  <h1>Welcome Back to The Reel Deal!</h1>
+  <h2>
+    Log in to continue discovering the best films with our expert reviews.
+  </h2>
+  <form (submit)="getUser($event)">
+    <div class="form-item">
+      <label for="signin-username">Username</label>
+      <input id="signin-username" name="signin-username" type="text" required />
+    </div>
+    <div class="form-item">
+      <label for="signin-password">Password</label>
+      <input id="signin-password" name="signin-password" type="text" required />
+    </div>
 
-  <button type="submit">Submit</button>
-</form>
+    <button type="submit">Submit</button>
+  </form>
+  <button (click)="changeDisplay()" class="change-display-button">
+    New to the community? Click here to sign up.
+  </button>
+  }
+</section>

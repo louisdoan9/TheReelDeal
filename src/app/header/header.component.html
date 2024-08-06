@@ -6,6 +6,12 @@
   <div class="buttons-container">
     <a class="reviews" routerLink="all-reviews">Reviews</a>
     <a class="films" routerLink="all-films">Movies</a>
-    <button class="sign-up">Sign up</button>
+    @if (!localStorage['userInfo']) {
+    <button class="sign-up"><a routerLink="sign-up">Sign up</a></button>
+    } @else {
+    <button class="sign-up" (click)="localStorage.clear(); location.reload()">
+      Log out
+    </button>
+    }
   </div>
 </nav>

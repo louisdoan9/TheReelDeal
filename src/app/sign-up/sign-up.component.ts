@@ -8,6 +8,16 @@ import { Component } from '@angular/core';
   styleUrl: './sign-up.component.scss',
 })
 export class SignUpComponent {
+  display = 'sign-up';
+
+  changeDisplay() {
+    if (this.display === 'sign-in') {
+      this.display = 'sign-up';
+    } else {
+      this.display = 'sign-in';
+    }
+  }
+
   createUser(event: Event) {
     event.preventDefault();
 
@@ -59,7 +69,7 @@ export class SignUpComponent {
       }),
     }).then((res) =>
       res.json().then((data) => {
-        console.log(data);
+        localStorage.setItem('userInfo', data.userInfo[0]);
       })
     );
   }

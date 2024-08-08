@@ -29,6 +29,12 @@ export class SpecificFilmsPageComponent {
     'Score Trend': '0',
     'Film Categories': [],
   };
+  relatedFilms: {
+    ID: string;
+    Title: string;
+    'Normalized Score': number;
+    'Matching Categories': [];
+  }[] = [];
 
   constructor() {
     this.filmID = this.route.snapshot.params['id'];
@@ -40,8 +46,21 @@ export class SpecificFilmsPageComponent {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         this.filmInfo = data;
+
+        fetch(
+          'https://the-reel-deal-backend.vercel.app/related-films/' +
+            this.filmID
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            this.relatedFilms = data;
+          });
       });
+  }
+
+  handleRedirect(id: string) {
+    window.location.href = '/all-films/' + id;
   }
 }

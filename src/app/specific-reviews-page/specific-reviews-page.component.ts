@@ -47,6 +47,15 @@ export class SpecificReviewsPageComponent {
       .then((response) => response.json())
       .then((data) => {
         this.reviewInfo = data;
+
+        fetch(
+          'https://the-reel-deal-backend.vercel.app/related-reviews/' +
+            this.reviewID
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+          });
       });
   }
 }

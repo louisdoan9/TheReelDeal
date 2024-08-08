@@ -35,6 +35,41 @@
     <span class="score low">{{ filmInfo["Score Trend"] }}</span>
     }
   </p>
+
+  <h2 class="related-film-title">Related Films:</h2>
+  <ul class="related-films">
+    @for (relatedFilm of relatedFilms; track relatedFilm.ID) {
+    <a (click)="handleRedirect(relatedFilm.ID)" class="film">
+      <div class="film-title-container">
+        <h3 class="film-title">{{ relatedFilm.Title }}</h3>
+      </div>
+      <p class="film-score">
+        Normalized Score: @if (Math.round(relatedFilm['Normalized Score'] * 10)
+        / 10 >= 0.80) {
+        <span class="score high">{{
+          Math.round(relatedFilm["Normalized Score"] * 10) / 10
+        }}</span>
+        } @else if (Math.round(relatedFilm['Normalized Score'] * 10) / 10 >=
+        0.40) {
+        <span class="score medium">{{
+          Math.round(relatedFilm["Normalized Score"] * 10) / 10
+        }}</span>
+        } @else {
+        <span class="score low">{{
+          Math.round(relatedFilm["Normalized Score"] * 10) / 10
+        }}</span>
+        }
+      </p>
+
+      <h3>{{ relatedFilm["Matching Categories"].length }} shared categories</h3>
+      <ul class="category-shared">
+        @for (category of relatedFilm['Matching Categories']; track category) {
+        <li>{{ category }}</li>
+        }
+      </ul>
+    </a>
+    }
+  </ul>
 </section>
 } @else {
 <app-access-denied></app-access-denied>

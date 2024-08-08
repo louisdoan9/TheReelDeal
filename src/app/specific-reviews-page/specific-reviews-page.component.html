@@ -21,6 +21,24 @@
     </a>
     }
   </ul>
+  <h2 class="related-review-title">Related Reviews:</h2>
+  <ul class="related-reviews">
+    @for (review of relatedReviews; track review.ID) {
+    <a (click)="handleRedirect(review.ID)" class="review">
+      <h3 class="author">
+        By <em>{{ review.Author }}</em>
+      </h3>
+      <div class="review-title-container">
+        <h3 class="review-title">"{{ review.Title }}"</h3>
+      </div>
+      <p>{{ review["Matching Films"].length }} shared films</p>
+      @for (film of review['Matching Films']; track film) {
+      <li class="film-title">{{ film }}</li>
+      }
+      <p class="date">{{ review.Date }}</p>
+    </a>
+    }
+  </ul>
 </section>
 } @else {
 <app-access-denied></app-access-denied>

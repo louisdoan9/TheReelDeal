@@ -34,6 +34,13 @@ export class SpecificReviewsPageComponent {
     Author: '',
     'Mentioned Films': [],
   };
+  relatedReviews: {
+    ID: string;
+    Title: string;
+    Author: string;
+    Date: string;
+    'Matching Films': [];
+  }[] = [];
 
   constructor() {
     this.reviewID = this.route.snapshot.params['id'];
@@ -54,8 +61,12 @@ export class SpecificReviewsPageComponent {
         )
           .then((response) => response.json())
           .then((data) => {
-            console.log(data);
+            this.relatedReviews = data;
           });
       });
+  }
+
+  handleRedirect(id: string) {
+    window.location.href = '/all-reviews/' + id;
   }
 }

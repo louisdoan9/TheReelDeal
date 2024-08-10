@@ -12,7 +12,7 @@ import { AccessDeniedComponent } from '../access-denied/access-denied.component'
 export class AllFilmsPageComponent {
   Math = Math;
   localStorage = localStorage;
-  films = [];
+  films: { ID: Number; Title: string; 'Normalized Score': Number }[] = [];
 
   ngOnInit() {
     fetch('https://the-reel-deal-backend.vercel.app/films-partial')

@@ -10,10 +10,10 @@ import { RouterModule } from '@angular/router';
 })
 export class TopMoviesComponent {
   Math = Math;
-  films = [];
+  films: { ID: Number; Title: string; 'Normalized Score': Number }[] = [];
 
   ngOnInit() {
-    fetch('https://the-reel-deal-backend.vercel.app/films-partial/latest')
+    fetch('https://the-reel-deal-backend.vercel.app/films-partial/top')
       .then((response) => response.json())
       .then((data) => {
         this.films = data;

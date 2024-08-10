@@ -4,16 +4,24 @@
   <h1>Films</h1>
   <h2>See how your favorite films stack up against each other!</h2>
   <ul>
-    @for (film of films; track film[0]) {
-    <a [routerLink]="[film[0]]" class="film">
-      <h3 class="film-title">{{ film[1] }}</h3>
+    @for (film of films; track film.ID) {
+    <a [routerLink]="[film.ID]" class="film">
+      <h3 class="film-title">{{ film.Title }}</h3>
       <p class="film-score">
-        Normalized Score: @if (Math.round(film[2] * 10) / 10 >= 0.80) {
-        <span class="score high">{{ Math.round(film[2] * 10) / 10 }}</span>
-        } @else if (Math.round(film[2] * 10) / 10 >= 0.40) {
-        <span class="score medium">{{ Math.round(film[2] * 10) / 10 }}</span>
+        Normalized Score: @if (Math.round(film['Normalized Score'].valueOf() *
+        10) / 10 >= 0.80) {
+        <span class="score high">{{
+          Math.round(film["Normalized Score"].valueOf() * 10) / 10
+        }}</span>
+        } @else if (Math.round(film['Normalized Score'].valueOf() * 10) / 10 >=
+        0.40) {
+        <span class="score medium">{{
+          Math.round(film["Normalized Score"].valueOf() * 10) / 10
+        }}</span>
         } @else {
-        <span class="score low">{{ Math.round(film[2] * 10) / 10 }}</span>
+        <span class="score low">{{
+          Math.round(film["Normalized Score"].valueOf() * 10) / 10
+        }}</span>
         }
       </p></a
     >}

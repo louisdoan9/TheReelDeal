@@ -4,16 +4,24 @@
     Find the top-rated movies according to our critics' scores!
   </p>
   <ul>
-    @for (film of films; track film[0]) {
-    <a [routerLink]="['all-films', film[0]]" class="film">
-      <h3 class="film-title">{{ film[1] }}</h3>
+    @for (film of films; track film.ID) {
+    <a [routerLink]="['all-films', film.ID]" class="film">
+      <h3 class="film-title">{{ film.Title }}</h3>
       <p class="film-score">
-        Normalized Score: @if (Math.round(film[2] * 10) / 10 >= 0.80) {
-        <span class="score high">{{ Math.round(film[2] * 10) / 10 }}</span>
-        } @else if (Math.round(film[2] * 10) / 10 >= 0.40) {
-        <span class="score medium">{{ Math.round(film[2] * 10) / 10 }}</span>
+        Normalized Score: @if (Math.round(film['Normalized Score'].valueOf() *
+        10) / 10 >= 0.80) {
+        <span class="score high">{{
+          Math.round(film["Normalized Score"].valueOf() * 10) / 10
+        }}</span>
+        } @else if (Math.round(film['Normalized Score'].valueOf() * 10) / 10 >=
+        0.40) {
+        <span class="score medium">{{
+          Math.round(film["Normalized Score"].valueOf() * 10) / 10
+        }}</span>
         } @else {
-        <span class="score low">{{ Math.round(film[2] * 10) / 10 }}</span>
+        <span class="score low">{{
+          Math.round(film["Normalized Score"].valueOf() * 10) / 10
+        }}</span>
         }
       </p>
     </a>

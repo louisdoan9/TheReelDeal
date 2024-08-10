@@ -21,7 +21,6 @@ export class LatestReviewsComponent {
     fetch('https://the-reel-deal-backend.vercel.app/reviews-partial/latest')
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         this.reviews = data;
       });
   }

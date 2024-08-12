@@ -26,6 +26,28 @@
     }}</span>
     }
   </p>
+  <p class="score-explaination">
+    Normalized score is an indicator of how a film was received initially,
+    keeping in mind that different reviewers use different scoring systems.
+    <br />
+    <br />
+    How It Works: For each reviewer's initial review of a film, if the reviewer
+    gives the film a score that's as good as or better than the average of their
+    past ratings up to that point, that film gets a point of 1. If the score is
+    below that reviewer's average, it doesn't get a point.
+    <br />
+    <br />
+    Normalized Score: The normalized score for a film is the sum of these points
+    from each different reviewer (x) divided by the total number of initial
+    reviews (y), (x/y).
+    <br />
+    <br />
+    Scores close to 1 imply that most reviewers gave the film a score higher
+    than their average at the time.
+    <br />
+    Scores close to 0 imply that most reviewers gave the film a score lower than
+    their average rating at the time.
+  </p>
   <p class="film-score">
     Score Trend: @if (filmInfo["Score Trend"] == "0") {
     <span class="score high">{{ filmInfo["Score Trend"] }}</span>
@@ -34,6 +56,27 @@
     } @else {
     <span class="score low">{{ filmInfo["Score Trend"] }}</span>
     }
+  </p>
+  <p class="score-explaination">
+    Score trend is an indicator of how a film was received over time, keeping in
+    mind that different reviewers use different scoring systems.
+    <br />
+    <br />
+    How It Works: Each film will have a total number of follow-up reviews (n).
+    Of the total, some reviewers will give a higher score to the film in their
+    follow-up compared to their initial review (m).
+    <br />
+    <br />
+    Score Trend: The score trend of a film is the difference between the number
+    of follow-up reviews with higher scores and the total number of follow-up
+    reviews, (m - n).
+    <br />
+    <br />
+    Scores close to 0 imply that the most reviewers gave the film a higher score
+    in their follow-up reviews than their initial review.
+    <br />
+    The more negative a score is implies that most reviewers gave the film a
+    lower score in their follow-up reviews than the their initial review.
   </p>
 
   <h2 class="related-film-title">Related Films:</h2>

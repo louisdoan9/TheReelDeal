@@ -16,6 +16,8 @@ nav {
     display: flex;
     margin-right: auto;
     align-items: center;
+    color: inherit;
+    text-decoration: none;
 
     @media (max-width: 650px) {
       margin: 0;
@@ -32,10 +34,6 @@ nav {
     h1 {
       margin: 0;
       font-size: 30px;
-      a {
-        color: white;
-        text-decoration: none;
-      }
     }
   }
 

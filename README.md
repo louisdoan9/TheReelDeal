@@ -1,27 +1,30 @@
-# TheReelDeal
+# The Reel Deal 🎬
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
+![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
-## Development server
+A website where users can browse detailed movie reviews and see movie ratings.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Deployment 🚀
 
-## Code scaffolding
+https://the-reel-deal.vercel.app/
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Features
 
-## Build
+- User authentication to be able to access review and film data
+- Access critic reviews including scores for different films
+- Access films including a normalized score and trending score calculated based on critic reviews
+- Reviews and films have a "related" section displaying reviews that cover the same films/films that have the same categories
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Related
 
-## Running unit tests
+- [The Reel Deal Backend](https://github.com/louisdoan9/TheReelDealBackend)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Screenshots 📸
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+![App Screenshot 1](./README_images/thereeldeal.png)
+![App Screenshot 2](./README_images/thereeldeal2.png)
+![App Screenshot 3](./README_images/thereeldeal3.png)
+![App Screenshot 4](./README_images/thereeldeal4.png)
+![App Screenshot 5](./README_images/thereeldeal5.png)
+![App Screenshot 6](./README_images/thereeldeal6.png)
